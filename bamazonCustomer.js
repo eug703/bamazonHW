@@ -41,7 +41,7 @@ function customerPrompt(){
                 };
                 if(customerChoice.stock_quantity < parseInt(answer.productAmount)){
                     console.log("\n================================================");
-                    console.log(`Sorry we do not have enough of that item in stock, we only have ${customerChoice.stock_quantity} of item ${answer.userChoice}`);
+                    console.log(`Sorry we do not have enough in stock, we only have ${customerChoice.stock_quantity} of item ${answer.userChoice}`);
                     console.log("\n================================================");
                     connection.end();
                 }else{
