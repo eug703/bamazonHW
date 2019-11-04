@@ -16,6 +16,14 @@ connection.connect(function(err){
     customerPrompt();
 });
 
+function createChoicesArray(res){
+    let arrayID = [];
+    for(var i in res)
+        arrayID.push(`${res[i].id} : ${res[i].product_name} - ${res[i].stock_quantity}`);
+    return arrayID;
+};
+
+
 function customerPrompt(){
     connection.query("SELECT * FROM products", function(err,response){
         if(err) throw err
